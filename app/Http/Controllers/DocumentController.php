@@ -34,6 +34,7 @@ class DocumentController extends Controller
             'filename' => $path,
             'original_name' => $request->file('document')->getClientOriginalName(),
             'status' => 'pending',
+            'uploaded_at' => now(),
         ]);
 
         DocumentLog::create([
